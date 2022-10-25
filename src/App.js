@@ -14,6 +14,17 @@ const lines = [
 function App() {
   const [squares, setSquares] = useState(defaultSquares());
   const [winner,setWinner] = useState(null);
+
+  useEffect(() => {
+    const isComputerTurn = squares.filter(square => square !== null).length % 2 === 1;
+    const linesThatAre = (a,b,c) => {
+      return lines.filter(squareIndexes => {
+        const squareValues = squareIndexes.map(index =>[index]);
+        return JSON.stringify([a,b,c].sort()) === JSON.stringify(squareValues.sort());
+      })
+    }
+    
+  })
   return (
     <div className="App">
       <header className="App-header">
