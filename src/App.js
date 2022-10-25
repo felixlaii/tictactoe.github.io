@@ -1,6 +1,9 @@
 import './App.css';
 import Board from './components/Board';
 import Square from './components/Square';
+import {useState, useEffect} from 'react';
+
+const defaultSquares = () => (new Array(9)).fill(null);
 
 function App() {
   return (
