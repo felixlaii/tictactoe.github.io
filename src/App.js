@@ -24,8 +24,8 @@ function App() {
     const isComputerTurn =
       squares.filter((square) => square !== null).length % 2 === 1;
     const linesThatAre = (a, b, c) => {
-      return lines.filter(squareIndexes => {
-        const squareValues = squareIndexes.map(index => squares[index]);
+      return lines.filter((squareIndexes) => {
+        const squareValues = squareIndexes.map((index) => [index]);
         return (
           JSON.stringify([a, b, c].sort()) ===
           JSON.stringify(squareValues.sort())
@@ -81,34 +81,32 @@ function App() {
   }, [squares]);
 
   function handleSquareClick(index) {
-    const isPlayerTurn = squares.filter(square => square !== null).length % 2 === 0;
+    const isPlayerTurn =
+      squares.filter((square) => square !== null).length % 2 === 0;
     if (isPlayerTurn) {
       let newSquares = squares;
-      newSquares[index] = 'x';
+      newSquares[index] = "x";
       setSquares([...newSquares]);
     }
   }
   return (
-   <main>
-     <Board>
-       {squares.map((square, index) => 
-       <Square 
-       x={square==='x'?1:0}
-       o={square==='o'?1:0}
-       onClick={() => handleSquareClick(index)}
-       />)}
-     </Board>
-     {!!winner && winner === 'x' && (
-       <div className="result green">
-         You WON!!
-       </div>
-     )}
-     {!!winner & winner === 'o' && (
-       <div className="result red">
-         You LOST!!
-       </div>
-     )}
-   </main>
+    <main>
+      <Board>
+        {squares.map((square, index) => (
+          <Square
+            x={square === "x" ? 1 : 0}
+            o={square === "o" ? 1 : 0}
+            onClick={() => handleSquareClick(index)}
+          />
+        ))}
+      </Board>
+      {!!winner && winner === "x" && (
+        <div className="result green">You WON!!</div>
+      )}
+      {!!winner & (winner === "o") && (
+        <div className="result red">You LOST!!</div>
+      )}
+    </main>
   );
 }
 
