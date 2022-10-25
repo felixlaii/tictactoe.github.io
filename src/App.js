@@ -42,6 +42,14 @@ function App() {
       if(winingLines.length > 0) {
         const winIndex = winingLines[0].filter(index => squares[index] === null)[0];
         putComputerAt(winIndex)
+        return;
+      }
+
+      const linesToBlock = linesThatAre('x', 'x', null);
+      if(linesToBlock.length > 0) {
+        const blockIndex = linesToBlock[0].filter(index => squares[index] === null)[0];
+        putComputerAt(blockIndex);
+        return;
       }
     }
 
