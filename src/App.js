@@ -79,6 +79,15 @@ function App() {
       putComputerAt(randomIndex);
     }
   }, [squares]);
+
+  function handleSquareClick(index) {
+    const isPlayerTurn = squares.filter(square => square !== null).length % 2 === 0;
+    if (isPlayerTurn) {
+      let newSquares = squares;
+      newSquares[index] = 'x';
+      setSquares([...newSquares]);
+    }
+  }
   return (
     <div className="App">
       <header className="App-header">
