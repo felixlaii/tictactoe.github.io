@@ -98,7 +98,16 @@ function App() {
        onClick={() => handleSquareClick(index)}
        />)}
      </Board>
-     
+     {!!winner && winner === 'x' && (
+       <div className="result green">
+         You WON!!
+       </div>
+     )}
+     {!!winner & winner === 'o' && (
+       <div className="result red">
+         You LOST!!
+       </div>
+     )}
    </main>
   );
 }
