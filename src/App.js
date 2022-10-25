@@ -29,6 +29,21 @@ function App() {
     if(playerWon) {
       setWinner('x');
     }
+    if(computerWon) {
+      setWinner('o');
+    }
+    const putComputerAt = index => {
+      let newSquares = squares;
+      newSquares[index] = 'o';
+      setSquares([...newSquares])
+    };
+    if(isComputerTurn) {
+      const winingLines = linesThatAre('o', 'o', null);
+      if(winingLines.length > 0) {
+        const winIndex = winingLines[0].filter(index => squares[index] === null)[0];
+        putComputerAt(winIndex)
+      }
+    }
 
   })
   return (
