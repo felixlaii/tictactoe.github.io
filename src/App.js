@@ -51,6 +51,13 @@ function App() {
         putComputerAt(blockIndex);
         return;
       }
+
+      const linesToContinue = linesThatAre('o', null, null);
+      if(linesToContinue.length > 0) {
+        putComputerAt(linesToContinue[0].filter(index => squares[index] === null)[0]);
+        return;
+      }
+      
     }
 
   })
