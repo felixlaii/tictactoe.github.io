@@ -57,10 +57,11 @@ function App() {
         putComputerAt(linesToContinue[0].filter(index => squares[index] === null)[0]);
         return;
       }
-      
+      const randomIndex = emptyIndexes[Math.ceil(Math.random()*emptyIndexes.length)];
+      putComputerAt(randomIndex)
     }
 
-  })
+  }, [squares]);
   return (
     <div className="App">
       <header className="App-header">
