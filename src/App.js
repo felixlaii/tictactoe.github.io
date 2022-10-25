@@ -12,6 +12,8 @@ const lines = [
 ];
 
 function App() {
+  const [squares, setSquares] = useState(defaultSquares());
+  const [winner,setWinner] = useState(null);
   return (
     <div className="App">
       <header className="App-header">
