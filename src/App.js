@@ -23,7 +23,13 @@ function App() {
         return JSON.stringify([a,b,c].sort()) === JSON.stringify(squareValues.sort());
       })
     }
-    
+    const emptyIndexes = squares.map((square,index) => square === null ? index : null).filter(val => val !== null);
+    const playerWon = linesThatAre('x', 'x', 'x').length > 0;
+    const computerWon = linesThatAre('o', 'o', 'o').length > 0;
+    if(playerWon) {
+      setWinner('x');
+    }
+
   })
   return (
     <div className="App">
