@@ -106,6 +106,7 @@ function TicTacToe() {
             clearHistory={clearHistory}
             />
         )}
+        <Square clickedArray={grid} handleClick={handleClick} />
     </div>
   )
 }
