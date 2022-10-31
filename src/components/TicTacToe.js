@@ -16,6 +16,11 @@ const winCombination = [
     [2, 4, 6],
 ]
 function TicTacToe() {
+    const [grid, setGrid] = useState(Array(9).fill(INITIAL));
+    const [player, setPlayer] =useState(false);
+    const [gameFinished, setGameFinished] = useState(false);
+    const [draw, setDraw] = useState(false);
+    const [winCount, setwinCount] = useState({X: 0, O: 0});
   return (
     <div>TicTacToe</div>
   )
