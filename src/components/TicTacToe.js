@@ -74,6 +74,21 @@ function TicTacToe() {
 
     isGameOver();
     
+    function handleClick(id) {
+        setGrid(
+            grid.map((item, index) => {
+                if(index === id) {
+                    if(player) {
+                        return X_PLAYER;
+                    } else {
+                        return O_PLAYER;
+                    }
+                } else {
+                    return item;
+                }
+            })
+        )
+    }
   return (
     <div>TicTacToe</div>
   )
