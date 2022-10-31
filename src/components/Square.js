@@ -13,7 +13,15 @@ function Square({ clickedArray, handleClick }) {
             >
               {item}
               </div>
-          )
+          );
+        } else {
+          return (
+            <div 
+            key={index} 
+            className="square clicked">
+              {item}
+              </div>
+          );
         }
       })}
     </div>
