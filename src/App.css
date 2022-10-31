@@ -6,3 +6,15 @@
   box-sizing: border-box;
   font-family: "PT Sans", sans-serif;
 }
+
+.square {
+  background: rgba(27, 255, 255, 0.8);
+  height: 5rem;
+  width: 5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: white;
+  font-size: 4rem;
+}
