@@ -44,7 +44,12 @@ function TicTacToe() {
                     grid[winCombination[i][0]] === O_PLAYER &&
                     grid[winCombination[i][1]] === O_PLAYER &&
                     grid[winCombination[i][2]] === O_PLAYER
-                )
+                ) {
+                    setGameFinished(true);
+                    setwinCount({ ...winCount, O: winCount.O + 1 });
+                    console.log("O WON");
+                    return;
+                }
             }
         }
     }
