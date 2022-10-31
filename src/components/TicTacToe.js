@@ -91,7 +91,22 @@ function TicTacToe() {
         setPlayer(!player);
     }
   return (
-    <div>TicTacToe</div>
+    <div>
+        <span className="win-history">
+            X's WINS: {winCount.X}
+            <br />
+            O's WINS: {winCount.O}
+        </span>
+        {gameFinished && (
+            <EndGame 
+            winCount={winCount}
+            restartGame={restartGame}
+            player={player}
+            draw={draw}
+            clearHistory={clearHistory}
+            />
+        )}
+    </div>
   )
 }
 
