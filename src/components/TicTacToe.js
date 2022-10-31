@@ -87,7 +87,8 @@ function TicTacToe() {
                     return item;
                 }
             })
-        )
+        );
+        setPlayer(!player);
     }
   return (
     <div>TicTacToe</div>
