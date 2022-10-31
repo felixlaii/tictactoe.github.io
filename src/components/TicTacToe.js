@@ -33,6 +33,8 @@ function TicTacToe() {
                 ) {
                     setGameFinished(true);
                     setwinCount({ ...winCount, X: winCount.X + 1});
+                    console.log("X WON");
+                    return;
                 }
             }
         }
