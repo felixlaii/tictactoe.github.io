@@ -37,6 +37,15 @@ function TicTacToe() {
                     return;
                 }
             }
+
+            // O win check
+            for(let i = 0; i < 8; i++) {
+                if(
+                    grid[winCombination[i][0]] === O_PLAYER &&
+                    grid[winCombination[i][1]] === O_PLAYER &&
+                    grid[winCombination[i][2]] === O_PLAYER
+                )
+            }
         }
     }
   return (
