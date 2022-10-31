@@ -21,6 +21,19 @@ function TicTacToe() {
     const [gameFinished, setGameFinished] = useState(false);
     const [draw, setDraw] = useState(false);
     const [winCount, setwinCount] = useState({X: 0, O: 0});
+
+    function isGameOver() {
+        if (!gameFinished) {
+            //X win check
+            for(let i = 0; i < 8; i++) {
+                if(
+                    grid[winCombination[i][0]] === X_PLAYER &&
+                    grid[winCombination[i][1]] === X_PLAYER &&
+                    grid[winCombination[i][2]] === X_PLAYER
+                ) 
+            }
+        }
+    }
   return (
     <div>TicTacToe</div>
   )
