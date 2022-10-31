@@ -75,3 +75,8 @@
   color: rgb(27, 255, 255);
   border: 2px solid rgb(27, 255, 255);
 }
+
+.win-text {
+  color: white;
+  font-size: 5rem;
+}
