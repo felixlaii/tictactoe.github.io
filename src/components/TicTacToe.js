@@ -67,6 +67,12 @@ function TicTacToe() {
         setDraw(false);
     }
 
+    function clearHistory() {
+        setwinCount({ X: 0, O: 0 });
+        restartGame();
+    }
+
+    isGameOver();
     
   return (
     <div>TicTacToe</div>
