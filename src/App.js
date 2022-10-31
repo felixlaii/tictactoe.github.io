@@ -1,9 +1,6 @@
 import "./App.css";
-import Board from "./components/Board";
-import Square from "./components/Square";
-import { useState, useEffect } from "react";
-
-const defaultSquares = () => new Array(9).fill(null);
+import React from "react";
+import TicTacToe from "./components/TicTacToe";
 
 const lines = [
   [0, 1, 2],
