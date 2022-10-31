@@ -51,8 +51,23 @@ function TicTacToe() {
                     return;
                 }
             }
+
+            // Draw game check
+            if(!grid.includes(INITIAL)) {
+                setDraw(true);
+                setGameFinished(true);
+                console.log("DRAW");
+            }
         }
     }
+
+    function restartGame() {
+        setGrid(Array(9).fill(INITIAL));
+        setGameFinished(false);
+        setDraw(false);
+    }
+
+    
   return (
     <div>TicTacToe</div>
   )
