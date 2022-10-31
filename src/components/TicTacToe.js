@@ -30,7 +30,10 @@ function TicTacToe() {
                     grid[winCombination[i][0]] === X_PLAYER &&
                     grid[winCombination[i][1]] === X_PLAYER &&
                     grid[winCombination[i][2]] === X_PLAYER
-                ) 
+                ) {
+                    setGameFinished(true);
+                    setwinCount({ ...winCount, X: winCount.X + 1});
+                }
             }
         }
     }
